@@ -8,14 +8,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const CadastroScreen(),
+      home: const LoginScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class CadastroScreen extends StatelessWidget {
-  const CadastroScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class CadastroScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'CADASTRO',
+                      'LOGIN',
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -96,12 +96,13 @@ class CadastroScreen extends StatelessWidget {
                           backgroundColor: Colors.grey[300],
                           foregroundColor: Colors.black,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(20),
                           ),
                           padding: const EdgeInsets.symmetric(vertical: 16),
+                          elevation: 4,
                         ),
                         onPressed: () {
-                          // lógica de cadastro aqui
+                          // lógica de login aqui
                         },
                         child: const Text(
                           'ENTRAR',
@@ -109,21 +110,6 @@ class CadastroScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 16),
-                    Center(
-                      child: TextButton(
-                        onPressed: () {
-                          // navegação para tela de login
-                        },
-                        child: const Text(
-                          'Já tem Cadastro? Clique aqui',
-                          style: TextStyle(
-                            color: Color(0xFF0B0F2F),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    )
                   ],
                 ),
               ),
